@@ -6,7 +6,7 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/05 14:06:20 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/05 14:44:24 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/05 15:27:32 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -32,7 +32,7 @@ void	*ft_memcpy(void *dest, const void *src, unsigned int n);
 void	*ft_memmove(void *dest, const void *src, unsigned int n);
 void	*ft_memchr(const void *s, int c, unsigned int n);
 void	*ft_memset(void *s, int c, unsigned int n);
-
-
+int	ft_toupper(int c);
+int	ft_tolower(int c);
 
 #endif

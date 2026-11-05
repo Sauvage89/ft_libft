@@ -6,13 +6,13 @@
 #    By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/11/05 14:02:03 by lensauva          #+#    #+#              #
-#    Updated: 2026/11/05 14:52:34 by lensauva         ###   ########lyon.fr    #
+#    Updated: 2026/11/05 15:24:17 by lensauva         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
 # ================================ PROJET ==================================== #
 
-NAME		:= libft.exe
+NAME		:= libft.a
 CC			:= cc
 CFLAGS		:= -Wall -Wextra -Werror
 
@@ -63,7 +63,7 @@ CPPFLAGS	:= -I$(INC_DIR) -MMD -MP
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $@
+	ar rcs -o $@ $(OBJS)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
