@@ -6,20 +6,21 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/05 13:46:28 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/10 06:37:03 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/10 07:05:16 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <limits.h>
+#include <stddef.h>
 
-void	*ft_calloc(unsigned int nmemb, unsigned int size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void			*new;
 	unsigned int	i;
 	unsigned int	j;
 
-	if (nmemb != 0 && size > UINT_MAX / nmemb)
+	if (size != 0 && nmemb > UINT_MAX / size)
 		return (0);
 	new = (void *)malloc(size * nmemb);
 	if (new == 0)
