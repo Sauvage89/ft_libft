@@ -6,7 +6,7 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 01:00:55 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/05 14:46:02 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/05 16:03:16 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ unsigned int	ft_strlcpy(char *dst, const char *src, unsigned int size)
 	}
 	dst[i] = 0;
 	return (len_try_cpy);
-
 }
 /*
 #include <stdlib.h>
@@ -38,7 +37,8 @@ unsigned int	ft_strlcpy(char *dst, const char *src, unsigned int size)
 #include <string.h>
 #include <bsd/string.h>
 
-void	verif_original(char *src_content, int len_src, char *dest_content, int len_dest, int len)
+void	verif_original(char *src_content,
+	int len_src, char *dest_content, int len_dest, int len)
 {
 	char	protect1[1024];
 	char	*src;
@@ -55,7 +55,8 @@ void	verif_original(char *src_content, int len_src, char *dest_content, int len_
 	printf("after\tsrc='%s' dest='%s' len=%i\n", src, dest, len);
 }
 
-void	verif_my(char *src_content, int len_src, char *dest_content, int len_dest, int len)
+void	verif_my(char *src_content,
+	int len_src, char *dest_content, int len_dest, int len)
 {
 	char	protect1[1024];
 	char	*src;
@@ -150,5 +151,4 @@ int	main()
 		}
 		len++;
 	}
-}
-*/
+}*/

@@ -6,11 +6,9 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 00:38:17 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/05 14:56:26 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/10 03:36:01 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, unsigned int len)
 {
@@ -23,14 +21,14 @@ char	*ft_strnstr(const char *big, const char *little, unsigned int len)
 	while (big[i] && i < len)
 	{
 		j = 0;
-		while (little[j])
+		while (little[j] && i + j < len)
 		{
 			if (big[i + j] != little[j])
 				break ;
 			j++;
 		}
 		if (little[j] == 0)
-			return ((char *)little + i);
+			return ((char *)big + i);
 		i++;
 	}
 	return (0);

@@ -6,11 +6,9 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 18:55:47 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/05 14:33:54 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/10 03:32:17 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 void	ft_bzero(void *s, unsigned int n)
 {

@@ -6,11 +6,9 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 19:45:45 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/05 14:48:49 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/10 03:36:01 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -21,7 +19,7 @@ char	*ft_strrchr(const char *s, int c)
 		i++;
 	while (i >= 0)
 	{
-		if (s[i] == c)
+		if (s[i] == (char)c)
 			return ((char *)s + i);
 		i--;
 	}

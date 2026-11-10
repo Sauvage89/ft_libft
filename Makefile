@@ -6,7 +6,7 @@
 #    By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/11/05 14:02:03 by lensauva          #+#    #+#              #
-#    Updated: 2026/11/05 15:24:17 by lensauva         ###   ########lyon.fr    #
+#    Updated: 2026/11/10 01:54:59 by lensauva         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,13 +14,11 @@
 
 NAME		:= libft.a
 CC			:= cc
+
+# ================================ FLAGS ==================================== #
+
 CFLAGS		:= -Wall -Wextra -Werror
-
-# ============================== DOSSIERS ==================================== #
-
-SRC_DIR		:= src
-OBJ_DIR		:= obj
-INC_DIR		:= include
+CINCLUDE	:= -MMD -MP
 
 # =============================== SOURCES ==================================== #
 
@@ -46,17 +44,31 @@ SRC_FILES	:= ft_isalpha.c \
 			   ft_strnstr.c \
 			   ft_atoi.c \
 			   ft_calloc.c \
-			   ft_strdup.c
+			   ft_strdup.c \
+			   ft_substr.c \
+			   ft_strjoin.c \
+			   ft_strtrim.c \
+			   ft_split.c \
+			   ft_itoa.c \
+			   ft_strmapi.c \
+			   ft_striteri.c \
+			   ft_putchar_fd.c \
+			   ft_putstr_fd.c \
+			   ft_putendl_fd.c \
+			   ft_putnbr_fd.c \
+			   ft_lstnew.c \
+			   ft_lstadd_front.c \
+			   ft_lstsize.c \
+			   ft_lstadd_back.c \
+			   ft_lstlast.c \
+			   ft_lstdelone.c \
+			   ft_lstclear.c \
+			   ft_lstiter.c \
+			   ft_lstmap.c
 
 SRCS		:= $(SRC_FILES)
 OBJS		:= $(SRCS:%.c=%.o)
-DEPS		:= $(OBJS:.o=.d)
-
-# ================================ FLAGS ===================================== #
-
-# -MMD : génère un .d (liste des headers utilisés) à côté de chaque .o
-# -MP  : ajoute une cible vide par header (évite l'erreur si un header est supprimé)
-CPPFLAGS	:= -I$(INC_DIR) -MMD -MP
+DEPS		:= $(OBJS:%.o=%.d)
 
 # ================================ REGLES ==================================== #
 
@@ -65,8 +77,8 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar rcs -o $@ $(OBJS)
 
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
-	$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
+%.o: %.c
+	$(CC) $(CFLAGS) $(CINCLUDE) -c $< -o $@
 
 clean:
 	rm -f $(OBJS)

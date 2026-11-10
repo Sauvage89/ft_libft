@@ -6,11 +6,9 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 00:32:24 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/05 14:55:36 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/10 03:33:46 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, unsigned int n)
 {
@@ -23,7 +21,7 @@ int	ft_memcmp(const void *s1, const void *s2, unsigned int n)
 	if (n == 0)
 		return (0);
 	i = 0;
-	while (ptr_s1[i] == ptr_s2[i] && i < n)
+	while (ptr_s1[i] == ptr_s2[i] && i < n - 1)
 		i++;
 	return (ptr_s1[i] - ptr_s2[i]);
 }

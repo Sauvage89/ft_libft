@@ -6,7 +6,7 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 19:38:17 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/05 14:47:01 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/05 16:00:34 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,8 @@ unsigned int	ft_strlcat(char *dst, const char *src, unsigned int size)
 #include <string.h>
 #include <bsd/string.h>
 
-void	verif_original(const char *src_content, int len_src, const char *dest_content, int len_dest, int len)
+void	verif_original(const char *src_content,
+	int len_src, const char *dest_content, int len_dest, int len)
 {
 	char	protect1[10];
 	char	src[100];
@@ -56,7 +57,8 @@ void	verif_original(const char *src_content, int len_src, const char *dest_conte
 	printf("after\tsrc='%s' dest='%s' len=%i\n", src, dest, len);
 }
 
-void	verif_my(char *src_content, int len_src, char *dest_content, int len_dest, int len)
+void	verif_my(char *src_content,
+	int len_src, char *dest_content, int len_dest, int len)
 {
 	char	protect1[1024];
 	char	src[100];

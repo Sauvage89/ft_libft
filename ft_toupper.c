@@ -6,11 +6,9 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 19:37:16 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/05 14:47:18 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/10 03:36:27 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_toupper(int c)
 {

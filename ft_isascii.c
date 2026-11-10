@@ -6,11 +6,9 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 18:11:51 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/03 18:15:47 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/10 03:33:00 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isascii(int c)
 {

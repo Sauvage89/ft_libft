@@ -6,11 +6,9 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 17:58:54 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/03 18:10:12 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/10 03:36:41 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isdigit(int c)
 {

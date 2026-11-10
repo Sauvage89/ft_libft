@@ -6,11 +6,9 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 17:55:04 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/03 17:58:38 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/10 03:33:00 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isalpha(int c)
 {
