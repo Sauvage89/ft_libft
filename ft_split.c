@@ -6,7 +6,7 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/06 16:24:13 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/10 03:27:27 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/10 05:40:46 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,8 @@ char	**ft_split(char const *s, char c)
 	unsigned int	len;
 	unsigned int	i;
 
+	if (s == 0)
+		return (0);
 	len = nb_splited_elem(s, c);
 	splits = (char **)malloc((sizeof(char *) * (len + 1)));
 	if (splits == 0)

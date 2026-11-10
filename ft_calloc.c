@@ -6,11 +6,12 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/05 13:46:28 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/10 03:32:15 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/10 06:37:03 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <limits.h>
 
 void	*ft_calloc(unsigned int nmemb, unsigned int size)
 {
@@ -18,6 +19,8 @@ void	*ft_calloc(unsigned int nmemb, unsigned int size)
 	unsigned int	i;
 	unsigned int	j;
 
+	if (nmemb != 0 && size > UINT_MAX / nmemb)
+		return (0);
 	new = (void *)malloc(size * nmemb);
 	if (new == 0)
 		return (0);
