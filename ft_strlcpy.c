@@ -6,16 +6,17 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 01:00:55 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/05 16:03:16 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/10 08:09:48 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stddef.h>
 
-unsigned int	ft_strlcpy(char *dst, const char *src, unsigned int size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	unsigned int	len_try_cpy;
-	unsigned int	i;
+	size_t	len_try_cpy;
+	size_t	i;
 
 	len_try_cpy = 0;
 	while (src[len_try_cpy])

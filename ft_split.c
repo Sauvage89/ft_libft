@@ -6,7 +6,7 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/06 16:24:13 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/10 05:40:46 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/10 08:42:49 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,9 @@ static void	ft_reset(char **splits, unsigned int len)
 	free(splits);
 }
 
-static unsigned int	len_first_elem(const char *s, char c)
+static int	save_copy(char **splits, const char *s, char c, unsigned int len)
 {
+	unsigned int	len_elem;
 	unsigned int	count;
 
 	count = 0;
@@ -37,14 +38,7 @@ static unsigned int	len_first_elem(const char *s, char c)
 			break ;
 		count++;
 	}
-	return (count);
-}
-
-static int	save_copy(char **splits, const char *s, char c, unsigned int len)
-{
-	unsigned int	len_elem;
-
-	len_elem = len_first_elem(s, c);
+	len_elem = count;
 	if (len_elem == 0)
 	{
 		ft_reset(splits, len);
@@ -59,7 +53,7 @@ static int	save_copy(char **splits, const char *s, char c, unsigned int len)
 	return (0);
 }
 
-static unsigned int	nb_splited_elem(const char *s, char c)
+static unsigned int	len_split(const char *s, char c)
 {
 	unsigned int	count;
 
@@ -76,20 +70,13 @@ static unsigned int	nb_splited_elem(const char *s, char c)
 	return (count);
 }
 
-char	**ft_split(char const *s, char c)
+static char	**ft_split_while(char const *s, char c, char **splits)
 {
-	char			**splits;
-	unsigned int	len;
 	unsigned int	i;
+	unsigned int	len;
 
-	if (s == 0)
-		return (0);
-	len = nb_splited_elem(s, c);
-	splits = (char **)malloc((sizeof(char *) * (len + 1)));
-	if (splits == 0)
-		return (0);
 	i = 0;
-	splits[len] = 0;
+	len = len_split(s, c);
 	while (i < len)
 	{
 		while (*s && *s == c)
@@ -104,4 +91,19 @@ char	**ft_split(char const *s, char c)
 			s++;
 	}
 	return (splits);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char			**splits;
+	unsigned int	len;
+
+	if (s == 0)
+		return (0);
+	len = len_split(s, c);
+	splits = (char **)malloc((sizeof(char *) * (len + 1)));
+	if (splits == 0)
+		return (0);
+	splits[len] = 0;
+	return (ft_split_while(s, c, splits));
 }

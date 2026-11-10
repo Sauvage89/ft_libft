@@ -6,13 +6,15 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 18:23:27 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/10 03:36:01 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/10 08:07:32 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlen(const char *str)
+#include <stddef.h>
+
+size_t	ft_strlen(const char *str)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i])

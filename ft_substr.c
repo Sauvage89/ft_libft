@@ -6,14 +6,14 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/06 09:33:20 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/09 22:39:13 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/10 08:23:07 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-char	*ft_substr(char const *s, unsigned int start, unsigned int len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char			*sub;
 	unsigned int	i;

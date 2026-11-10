@@ -6,20 +6,19 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 20:24:37 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/10 03:33:59 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/10 08:19:47 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memchr(const void *s, int c, unsigned int n)
-{
-	unsigned char	*ptr;
+#include <stddef.h>
 
-	ptr = (unsigned char *)s;
+void	*ft_memchr(const void *s, int c, size_t n)
+{
 	while (n > 0)
 	{
-		if (*ptr == (unsigned char)c)
-			return (ptr);
-		ptr++;
+		if (*(char *)s == (char)c)
+			return ((void *)s);
+		s = (char *)s + 1;
 		n--;
 	}
 	return (0);

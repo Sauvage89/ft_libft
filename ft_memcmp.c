@@ -6,22 +6,20 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 00:32:24 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/10 03:33:46 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/10 08:31:30 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_memcmp(const void *s1, const void *s2, unsigned int n)
-{
-	unsigned char	*ptr_s1;
-	unsigned char	*ptr_s2;
-	unsigned int	i;
+#include <stddef.h>
 
-	ptr_s1 = (unsigned char *)s1;
-	ptr_s2 = (unsigned char *)s2;
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
+{
+	size_t	i;
+
 	if (n == 0)
 		return (0);
 	i = 0;
-	while (ptr_s1[i] == ptr_s2[i] && i < n - 1)
+	while (((char *)s1)[i] == ((char *)s2)[i] && i < n - 1)
 		i++;
-	return (ptr_s1[i] - ptr_s2[i]);
+	return ((int)(((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]));
 }

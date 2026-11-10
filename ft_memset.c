@@ -6,13 +6,15 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 19:07:42 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/10 03:35:17 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/10 08:10:07 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void *s, int c, unsigned int n)
+#include <stddef.h>
+
+void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < n)
