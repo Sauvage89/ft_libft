@@ -152,15 +152,13 @@ typedef struct s_list
 
 ### References
 
-- `man 3 <function>` – man pages of the reimplemented functions (`strlen`, `memcpy`, `strlcpy`, `calloc`, etc.)
+- man pages of the reimplemented functions
 - Kernighan & Ritchie, *The C Programming Language*
 - peer to peer
-- The 42 Norm (see the intranet)
+- The 42 Norm
 
 ### Use of AI
-
-> **To be completed honestly by the author(s).** Specify for which tasks and which parts of the project AI was used, for example:
 >
-> - *[Task 1: e.g. writing/proofreading this README]*
-> - *[Task 2: e.g. writing/proofreading the Makefile]*
-> - *[Parts of the project where AI was **not** used: e.g. all the code of the functions]*
+> - *[writing/proofreading this README]*
+> - *[writing/proofreading the Makefile]*
+> - *[documentation on syntax of C]*
