@@ -6,13 +6,12 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/05 13:46:28 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/10 07:05:16 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/10 08:56:01 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <limits.h>
-#include <stddef.h>
+#include <stdint.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
@@ -20,7 +19,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	unsigned int	i;
 	unsigned int	j;
 
-	if (size != 0 && nmemb > UINT_MAX / size)
+	if (size != 0 && nmemb > SIZE_MAX / size)
 		return (0);
 	new = (void *)malloc(size * nmemb);
 	if (new == 0)

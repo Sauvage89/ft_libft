@@ -6,12 +6,11 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 01:00:55 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/10 08:09:48 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/10 09:01:59 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
