@@ -6,7 +6,7 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/06 18:25:09 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/10 03:38:29 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/11 18:38:29 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*new;
 	unsigned int	i;
 
+	if (s == 0 || f == 0)
+		return (0);
 	new = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (new == 0)
 		return (0);

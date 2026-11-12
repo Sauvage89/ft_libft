@@ -6,7 +6,7 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 14:16:44 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/09 22:54:28 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/12 10:22:43 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*lst_new;
 	void	*content_new;
 
+	if (f == 0 || del == 0)
+		return (0);
 	lst_begin = 0;
 	while (lst)
 	{

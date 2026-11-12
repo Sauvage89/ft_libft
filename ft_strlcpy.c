@@ -6,7 +6,7 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 01:00:55 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/10 09:01:59 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/12 13:16:31 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t	len_try_cpy;
 	size_t	i;
 
+	if (dst == 0 || src == 0)
+		return (0);
 	len_try_cpy = 0;
 	while (src[len_try_cpy])
 		len_try_cpy++;

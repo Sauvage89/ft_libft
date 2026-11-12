@@ -6,17 +6,19 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 00:46:41 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/10 08:51:50 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/12 13:22:35 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <limits.h>
+#include <stdio.h>
 
 int	ft_atoi(const char *nptr)
 {
-	int	i;
-	int	nb;
-	int	sign;
+	int		i;
+	long	nb;
+	long	sign;
 
 	i = 0;
 	nb = 0;
@@ -30,10 +32,13 @@ int	ft_atoi(const char *nptr)
 		sign *= -1;
 		i++;
 	}
-	while (ft_isdigit(nptr[i]) == 1)
+	while (ft_isdigit(nptr[i]))
 	{
-		nb = nb * 10 + (nptr[i] - '0');
-		i++;
+		if (nb * 10 + nptr[i] - '0' < nb && sign == 1)
+			return (-1);
+		if (nb * 10 + nptr[i] - '0' < nb * sign && sign == -1)
+			return (0);
+		nb = nb * 10 + nptr[i++] - '0';
 	}
 	return (nb * sign);
 }

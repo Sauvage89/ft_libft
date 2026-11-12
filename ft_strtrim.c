@@ -6,7 +6,7 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/06 10:25:16 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/10 03:28:12 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/12 10:23:17 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	unsigned int	j;
 	unsigned int	start;
 
+	if (s1 == 0 || set == 0)
+		return (0);
 	start = 0;
 	while (is_sep(s1[start], set) == 0)
 		start++;

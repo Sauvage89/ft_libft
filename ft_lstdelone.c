@@ -6,7 +6,7 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 11:12:43 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/10 03:40:24 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/12 10:14:11 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
+	if (lst == 0 || del == 0)
+		return ;
 	del(lst->content);
 	free(lst);
 }

@@ -6,7 +6,7 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/06 16:24:13 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/10 08:42:49 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/11 18:35:22 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,8 @@ char	**ft_split(char const *s, char c)
 	char			**splits;
 	unsigned int	len;
 
+	if (s == 0)
+		return (0);
 	if (s == 0)
 		return (0);
 	len = len_split(s, c);

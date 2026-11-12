@@ -6,7 +6,7 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 19:38:17 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/10 07:22:36 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/12 13:16:44 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	len_dst;
 	size_t	i;
 
+	if (dst == 0 || src == 0)
+		return (0);
 	if (size == 0)
 		return (ft_strlen(src));
 	len_src = 0;
