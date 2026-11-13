@@ -6,12 +6,11 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/06 10:25:16 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/12 10:23:17 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/13 12:51:05 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static int	is_sep(char c, char const *set)
 {

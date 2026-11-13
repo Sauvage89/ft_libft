@@ -6,12 +6,11 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 14:16:44 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/12 10:22:43 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/13 12:51:52 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
