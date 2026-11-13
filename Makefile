@@ -6,7 +6,7 @@
 #    By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/11/05 14:02:03 by lensauva          #+#    #+#              #
-#    Updated: 2026/11/13 09:41:08 by lensauva         ###   ########lyon.fr    #
+#    Updated: 2026/11/13 19:18:41 by lensauva         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,10 +74,10 @@ DEPS		:= $(OBJS:%.o=%.d)
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) Makefile
 	ar rcs -o $@ $(OBJS)
 
-%.o: %.c
+%.o: %.c Makefile
 	$(CC) $(CFLAGS) $(CINCLUDE) -c $< -o $@
 
 clean:
