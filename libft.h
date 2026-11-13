@@ -6,7 +6,7 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/05 14:06:20 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/10 08:44:34 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/13 12:28:31 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -19,6 +19,8 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }	t_list;
+
+typedef long	(*t_write_func)(int, void *, unsigned long);
 
 char			*ft_strnstr(const char *big, const char *little,
 					size_t len);
