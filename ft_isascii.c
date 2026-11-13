@@ -6,13 +6,11 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 18:11:51 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/10 03:33:00 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/13 10:59:09 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(int c)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	return (c >= 0 && c <= 127);
 }

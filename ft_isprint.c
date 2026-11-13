@@ -6,13 +6,11 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 18:17:59 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/10 03:33:00 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/13 11:00:03 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-	if (c >= ' ' && c <= '~')
-		return (1);
-	return (0);
+	return (c >= ' ' && c <= '~');
 }
