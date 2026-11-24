@@ -1,16 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_lst_2.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/09 14:16:44 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/13 12:51:52 by lensauva         ###   ########lyon.fr   */
+/*   Created: 2026/11/24 15:33:39 by lensauva          #+#    #+#             */
+/*   Updated: 2026/11/24 15:33:49 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void	ft_lstadd_back(t_list **lst, t_list *new)
+{
+	t_list	*ptr;
+
+	if (lst == 0)
+		return ;
+	if (*lst == 0)
+	{
+		*lst = new;
+		return ;
+	}
+	ptr = *lst;
+	while (ptr && ptr->next)
+	{
+		ptr = ptr->next;
+	}
+	ptr->next = new;
+}
+
+void	ft_lstadd_front(t_list **lst, t_list *new)
+{
+	if (lst == 0 || new == 0)
+		return ;
+	new->next = *lst;
+	*lst = new;
+}
+
+void	ft_lstiter(t_list *lst, void (*f)(void *))
+{
+	while (lst)
+	{
+		f(lst->content);
+		lst = lst->next;
+	}
+}
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {

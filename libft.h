@@ -6,13 +6,17 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/05 14:06:20 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/13 12:28:31 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/24 15:18:56 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
 # define LIBFT_H
 
 # include <stddef.h>
+# include <aio.h>
+
+# define ERROR_WRITE 67
+# define ERROR_PARAMPTR_NULL 69
 
 typedef struct s_list
 {
@@ -55,10 +59,10 @@ char			*ft_strtrim(char const *s1, char const *set);
 char			**ft_split(char const *s, char c);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void			ft_striteri(char *s, void (*f)(unsigned int, char *));
-void			ft_putchar_fd(char c, int fd);
-void			ft_putstr_fd(char *s, int fd);
-void			ft_putendl_fd(char *s, int fd);
-void			ft_putnbr_fd(int n, int fd);
+ssize_t			ft_putchar_fd(char c, int fd);
+ssize_t			ft_putstr_fd(char *s, int fd);
+ssize_t			ft_putendl_fd(char *s, int fd);
+ssize_t			ft_putnbr_fd(long n, int fd);
 t_list			*ft_lstnew(void *content);
 void			ft_lstadd_front(t_list **lst, t_list *new);
 unsigned int	ft_lstsize(t_list *lst);
