@@ -6,7 +6,7 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/05 14:06:20 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/24 15:18:56 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/27 20:55:06 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -15,8 +15,8 @@
 # include <stddef.h>
 # include <aio.h>
 
-# define ERROR_WRITE 67
-# define ERROR_PARAMPTR_NULL 69
+# define ERROR_WRITE -67
+# define ERROR_PARAMPTR_NULL -69
 
 typedef struct s_list
 {
