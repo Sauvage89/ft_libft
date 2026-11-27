@@ -6,7 +6,7 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/24 14:46:59 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/24 15:18:23 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/27 21:03:51 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ ssize_t	ft_putnbr_fd(long n, int fd)
 	return (ft_putstr_fd(buffer, fd));
 }
 
-ssize_t	ft_putstr_fd(char *s, int fd)
+ssize_t	ft_putstr_fd(const char *s, int fd)
 {
 	ssize_t	ret;
 	size_t	len;

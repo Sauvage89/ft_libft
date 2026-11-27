@@ -6,7 +6,7 @@
 /*   By: lensauva <lensauva@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/05 14:06:20 by lensauva          #+#    #+#             */
-/*   Updated: 2026/11/27 20:55:06 by lensauva         ###   ########lyon.fr   */
+/*   Updated: 2026/11/27 21:03:41 by lensauva         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -60,7 +60,7 @@ char			**ft_split(char const *s, char c);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 ssize_t			ft_putchar_fd(char c, int fd);
-ssize_t			ft_putstr_fd(char *s, int fd);
+ssize_t			ft_putstr_fd(const char *s, int fd);
 ssize_t			ft_putendl_fd(char *s, int fd);
 ssize_t			ft_putnbr_fd(long n, int fd);
 t_list			*ft_lstnew(void *content);
